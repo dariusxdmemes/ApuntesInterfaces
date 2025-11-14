@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ApuntesInterfaces</string>
+    <string name="titulo">Imagen: %1$s</string>
+    <string name="pantallaColumn">Ejemplo Column</string>
+    <string name="pantallaRow">Ejemplo Row</string>
+    <string name="pantallaGrid">Ejemplo Grid</string>
+    <string name="dropDown1">Opcion 1</string>
+    <string name="dropDown2">Opcion 2</string>
+    <string name="dropDown3">Opcion 3</string>
+</resources>
