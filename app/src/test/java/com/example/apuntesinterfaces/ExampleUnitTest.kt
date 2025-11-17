@@ -11,7 +11,19 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun imagenSeCreaCorrectamente() {
+        val data = ImageData("Ballena", "imagen", 123)
+        assertEquals("Ballena", data.nombreImagen)
+        assertEquals("imagen", data.descripImagen)
+        assertEquals(123, data.rutaImagen)
+    }
+
+    @Test
+    fun imagenSeCopiaCorrectamente() {
+        val data = ImageData("Ballena", "imagen", 123)
+        val copia = data.copy(nombreImagen = "Tortuga")
+
+        assertEquals("Tortuga", copia.nombreImagen)
+        assertEquals("imagen", copia.descripImagen)
     }
 }

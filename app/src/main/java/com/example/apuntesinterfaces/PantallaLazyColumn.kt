@@ -23,11 +23,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.apuntesinterfaces.ui.theme.Typography
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -119,8 +121,7 @@ fun PantallaLazyColumn(modifier: Modifier, snackbarHostState: SnackbarHostState,
                     ) {
                         Text(
                             text = stringResource(R.string.titulo, imageIndex.nombreImagen),
-                            fontWeight = FontWeight.Bold,
-                            fontFamily = fuentePoppins
+                            style = Typography.bodySmall
                         )
                     }
                     Image(

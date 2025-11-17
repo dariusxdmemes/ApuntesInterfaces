@@ -51,7 +51,8 @@ class MainActivity : ComponentActivity() {
                 val topBarHeaders = listOf(
                     "LazyColumn",
                     "LazyRow",
-                    "LazyGrid"
+                    "LazyGrid",
+                    "LazyStaggeredGrid"
                 )
 
                 val snackBarHostState = remember { SnackbarHostState() }
@@ -64,6 +65,7 @@ class MainActivity : ComponentActivity() {
                     "PantallaRowColumn" -> 0
                     "PantallaLazyRow" -> 1
                     "PantallaGrid" -> 2
+                    "LazyStaggeredGrid" -> 3
                     else -> 0
                 }
 
@@ -100,7 +102,10 @@ class MainActivity : ComponentActivity() {
                                     ) {
                                         DropdownMenuItem(
                                             text = { Text(text = stringResource(R.string.dropDown1)) },
-                                            onClick = {  }
+                                            onClick = {
+                                                navController.navigate("PantallaLazyStaggeredGrid")
+                                                dropDownExpanded = !dropDownExpanded
+                                            }
                                         )
                                         DropdownMenuItem(
                                             text = { Text(text = stringResource(R.string.dropDown2)) },
@@ -206,6 +211,13 @@ class MainActivity : ComponentActivity() {
                             PantallaGrid(
                                 modifier = Modifier
                                     .fillMaxSize(),
+                            )
+                        }
+                        composable("PantallaLazyStaggeredGrid") {
+                            PantallaLazyStaggeredGrid(
+                                modifier = Modifier
+                                    .fillMaxSize(),
+                                navController = navController
                             )
                         }
                     }
